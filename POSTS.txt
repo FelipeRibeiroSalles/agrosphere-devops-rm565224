@@ -1,0 +1,36 @@
+POST FAZENDA ex1
+
+{
+  "nome": "Fazenda Marte Alpha",
+  "localizacao": "São Paulo - Brasil"
+}
+
+
+POST FAZENDA ex2
+
+{
+  "nome": "Fazenda Lunar Beta",
+  "localizacao": "Campinas - Brasil"
+}
+
+
+
+
+
+POST PLANTIO ex1
+
+{
+  "nomeCultura": "Batata Espacial",
+  "dataPlantio": "2026-06-08T00:00:00",
+  "areaCultivada": 120.5,
+  "fazendaId": 1
+}
+
+POST PLANTIO ex2
+
+{
+  "nomeCultura": "Tomate Resistente",
+  "dataPlantio": "2026-06-09T00:00:00",
+  "areaCultivada": 75.0,
+  "fazendaId": 1
+}
