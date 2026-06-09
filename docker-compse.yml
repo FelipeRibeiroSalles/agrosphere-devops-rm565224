@@ -28,11 +28,12 @@ services:
 
     restart: always
 
-    environment:
-      MYSQL_ROOT_PASSWORD: root123
-      MYSQL_DATABASE: agrosphere_db
-      MYSQL_USER: agro_user
-      MYSQL_PASSWORD: agro_pass
+  environment:
+    MYSQL_ROOT_PASSWORD: root123
+    MYSQL_DATABASE: agrosphere_db
+    MYSQL_USER: agro_user
+    MYSQL_PASSWORD: agro_pass
+    MYSQL_ROOT_HOST: "%"
 
     ports:
       - "3306:3306"
