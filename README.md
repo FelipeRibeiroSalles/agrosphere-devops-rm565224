@@ -45,14 +45,14 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
       ↓
 
 [ Docker Compose ]
- ├── Container API (.NET 8)
- │      Porta 8080
- │
- └── Container MySQL 8
-        Porta 3306
+      ├── Container API (.NET 8)
+      │      └── Porta 8080
+      │
+      └── Container MySQL 8
+             └── Porta 3306
 
-Comunicação via Docker Network
-Persistência via Volume Nomeado
+[ Docker Network ]
+[ Volume Nomeado ]
 
 ---
 
