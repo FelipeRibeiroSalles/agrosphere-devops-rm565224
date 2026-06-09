@@ -112,7 +112,7 @@ Antes de iniciar o projeto, é necessário possuir instalado:
 # 🧰 1️⃣ Clonar o Repositório
 
 ```bash
-git clone <LINK-DO-REPOSITORIO>
+git clone (https://github.com/FelipeRibeiroSalles/agrosphere-devops-rm565224.git)
 ```
 
 ---
