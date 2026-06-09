@@ -38,13 +38,21 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 # 🏗️ Arquitetura da Solução
 
-A solução foi estruturada da seguinte forma:
+[ Usuário ]
+      ↓ HTTP :8080
 
-* Container da aplicação ASP.NET Core
-* Container MySQL
-* Comunicação via Docker Network
-* Persistência de dados no MySQL
-* Publicação em VM Azure
+[ Azure Virtual Machine ]
+      ↓
+
+[ Docker Compose ]
+ ├── Container API (.NET 8)
+ │      Porta 8080
+ │
+ └── Container MySQL 8
+        Porta 3306
+
+Comunicação via Docker Network
+Persistência via Volume Nomeado
 
 ---
 
