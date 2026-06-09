@@ -38,6 +38,7 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 # 🏗️ Arquitetura da Solução
 
+```txt
 [ Usuário ]
       ↓ HTTP :8080
 
@@ -53,6 +54,7 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 [ Docker Network ]
 [ Volume Nomeado ]
+```
 
 ---
 
