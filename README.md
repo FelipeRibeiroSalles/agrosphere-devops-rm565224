@@ -6,9 +6,8 @@ API REST desenvolvida em .NET para gerenciamento de Fazendas e Plantios, utiliza
 
 # 👨‍💻 Integrantes
 
-
-- Felipe Ribeiro Salles de Camargo RM: 565224
-- João Victor Santana dos Santos RM: 566063
+* Felipe Ribeiro Salles de Camargo RM: 565224
+* João Victor Santana dos Santos RM: 566063
 
 ---
 
@@ -16,8 +15,8 @@ API REST desenvolvida em .NET para gerenciamento de Fazendas e Plantios, utiliza
 
 O AgroSphere é uma solução desenvolvida para auxiliar no gerenciamento agrícola, permitindo o cadastro e gerenciamento de:
 
-- Fazendas
-- Plantios
+* Fazendas
+* Plantios
 
 A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conteinerização com Docker e banco de dados MySQL.
 
@@ -25,15 +24,15 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 # 🛠️ Tecnologias Utilizadas
 
-- .NET 8
-- ASP.NET Core
-- Entity Framework Core
-- MySQL 8
-- Docker
-- Docker Compose
-- Swagger
-- Azure VM
-- Linux Ubuntu
+* .NET 8
+* ASP.NET Core
+* Entity Framework Core
+* MySQL 8
+* Docker
+* Docker Compose
+* Swagger
+* Azure VM
+* Linux Ubuntu
 
 ---
 
@@ -41,11 +40,11 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 A solução foi estruturada da seguinte forma:
 
-- Container da aplicação ASP.NET Core
-- Container MySQL
-- Comunicação via Docker Network
-- Persistência de dados no MySQL
-- Publicação em VM Azure
+* Container da aplicação ASP.NET Core
+* Container MySQL
+* Comunicação via Docker Network
+* Persistência de dados no MySQL
+* Publicação em VM Azure
 
 ---
 
@@ -55,10 +54,10 @@ A aplicação foi hospedada em uma Máquina Virtual Linux no Microsoft Azure.
 
 ## Recursos utilizados
 
-- Azure Virtual Machine
-- Docker Engine
-- Docker Compose
-- Porta 8080 liberada via NSG
+* Azure Virtual Machine
+* Docker Engine
+* Docker Compose
+* Porta 8080 liberada via NSG
 
 ---
 
@@ -86,8 +85,8 @@ Banco MySQL executando em container Docker.
 
 ## Estrutura das tabelas
 
-- Fazendas
-- Plantios
+* Fazendas
+* Plantios
 
 ## Verificação do banco
 
@@ -101,18 +100,18 @@ Banco MySQL executando em container Docker.
 
 Antes de iniciar o projeto, é necessário possuir instalado:
 
-- Docker
-- Docker Compose
-- Git
-- Conta Microsoft Azure
-- Máquina Virtual Linux Ubuntu
+* Docker
+* Docker Compose
+* Git
+* Conta Microsoft Azure
+* Máquina Virtual Linux Ubuntu
 
 ---
 
 # 🧰 1️⃣ Clonar o Repositório
 
 ```bash
-git clone (https://github.com/FelipeRibeiroSalles/agrosphere-devops-rm565224.git)
+git clone https://github.com/FelipeRibeiroSalles/agrosphere-devops-rm565224.git
 ```
 
 ---
@@ -120,7 +119,7 @@ git clone (https://github.com/FelipeRibeiroSalles/agrosphere-devops-rm565224.git
 # 📂 2️⃣ Entrar na Pasta do Projeto
 
 ```bash
-cd agrosphere-devops
+cd agrosphere-devops-rm565224
 ```
 
 ---
@@ -145,24 +144,40 @@ docker ps
 
 Resultado esperado:
 
-- Container da API rodando
-- Container MySQL rodando
+* Container da API rodando
+* Container MySQL rodando
 
 ---
 
-# ☁️ 5️⃣ Configuração da Azure VM
+# 📜 5️⃣ Verificar Logs dos Containers
+
+## Logs da aplicação
+
+```bash
+docker logs app-rm565224
+```
+
+## Logs do MySQL
+
+```bash
+docker logs mysql-rm565224
+```
+
+---
+
+# ☁️ 6️⃣ Configuração da Azure VM
 
 ## Liberar Porta 8080
 
 No Network Security Group (NSG):
 
-- Porta: 8080
-- Protocolo: TCP
-- Ação: Allow
+* Porta: 8080
+* Protocolo: TCP
+* Ação: Allow
 
 ---
 
-# 🌐 6️⃣ Acessar Swagger
+# 🌐 7️⃣ Acessar Swagger
 
 Após subir os containers:
 
@@ -178,7 +193,7 @@ http://20.220.169.88:8080/swagger
 
 ---
 
-# 🗄️ 7️⃣ Acessar Banco de Dados MySQL
+# 🗄️ 8️⃣ Acessar Banco de Dados MySQL
 
 Entrar no container MySQL:
 
@@ -207,7 +222,7 @@ SELECT * FROM Plantios;
 
 ---
 
-# 🔐 8️⃣ Validar Usuário Não Root
+# 🔐 9️⃣ Validar Usuário Não Root
 
 Executar:
 
@@ -223,7 +238,7 @@ appuser
 
 ---
 
-# 📡 9️⃣ Testar Endpoints no Swagger
+# 📡 🔟 Testar Endpoints no Swagger
 
 ## CREATE
 
@@ -342,25 +357,39 @@ Validação final demonstrando lista vazia após exclusão.
 
 ---
 
+# 🗄️ Evidências de Persistência no Banco
+
+As operações CRUD foram evidenciadas diretamente no banco MySQL através de comandos SELECT, demonstrando:
+
+* CREATE refletido no banco
+* UPDATE refletido no banco
+* DELETE refletido no banco
+
+## Evidência CRUD no Banco
+
+![CRUD Banco](evidencias-CRUD.png)
+
+---
+
 # 🧪 Endpoints Disponíveis
 
 ## Fazendas
 
-- GET /api/Fazendas
-- POST /api/Fazendas
-- GET /api/Fazendas/{id}
-- PUT /api/Fazendas/{id}
-- DELETE /api/Fazendas/{id}
+* GET /api/Fazendas
+* POST /api/Fazendas
+* GET /api/Fazendas/{id}
+* PUT /api/Fazendas/{id}
+* DELETE /api/Fazendas/{id}
 
 ---
 
 ## Plantios
 
-- GET /api/Plantios
-- POST /api/Plantios
-- GET /api/Plantios/{id}
-- PUT /api/Plantios/{id}
-- DELETE /api/Plantios/{id}
+* GET /api/Plantios
+* POST /api/Plantios
+* GET /api/Plantios/{id}
+* PUT /api/Plantios/{id}
+* DELETE /api/Plantios/{id}
 
 ---
 
@@ -368,15 +397,15 @@ Validação final demonstrando lista vazia após exclusão.
 
 ## Serviços
 
-- app
-- mysql
+* app
+* mysql
 
 ## Portas
 
 | Serviço | Porta |
-|---|---|
-| API | 8080 |
-| MySQL | 3306 |
+| ------- | ----- |
+| API     | 8080  |
+| MySQL   | 3306  |
 
 ---
 
