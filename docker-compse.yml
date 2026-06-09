@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+
+  app:
+    container_name: app-rm565224
+
+    build:
+      context: ./AgroSphere.Api
+      dockerfile: Dockerfile
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+    depends_on:
+      - mysql
+
+    networks:
+      - agrosphere-network
+
+  mysql:
+    image: mysql:8.0
+
+    container_name: mysql-rm565224
+
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: agrosphere_db
+      MYSQL_USER: agro_user
+      MYSQL_PASSWORD: agro_pass
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    networks:
+      - agrosphere-network
+
+volumes:
+  mysql_data:
+
+networks:
+  agrosphere-network:
