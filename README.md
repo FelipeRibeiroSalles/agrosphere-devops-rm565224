@@ -9,7 +9,6 @@ API REST desenvolvida em .NET para gerenciamento de Fazendas e Plantios, utiliza
 
 - Felipe Ribeiro Salles de Camargo RM: 565224
 - João Victor Santana dos Santos RM: 566063
-- Nome RM
 
 ---
 
