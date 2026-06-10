@@ -38,23 +38,9 @@ A aplicação foi desenvolvida utilizando arquitetura baseada em API REST, conte
 
 # 🏗️ Arquitetura da Solução
 
-```txt
-[ Usuário ]
-      ↓ HTTP :8080
+---
 
-[ Azure Virtual Machine ]
-      ↓
-
-[ Docker Compose ]
-      ├── Container API (.NET 8)
-      │      └── Porta 8080
-      │
-      └── Container MySQL 8
-             └── Porta 3306
-
-[ Docker Network ]
-[ Volume Nomeado ]
-```
+<img width="475" height="685" alt="image" src="https://github.com/user-attachments/assets/0a1c410a-04dc-40b0-a586-87291fcdad6e" />
 
 ---
 
